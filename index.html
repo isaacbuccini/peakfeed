@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PeakFeed</title>
+<meta name="description" content="A personal, locally-run tool for cutting long videos into short vertical clips and publishing approved ones to your own connected accounts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap">
+  <a class="brand" href="./"><span class="dot"></span> PeakFeed</a>
+  <nav>
+    <a href="./" aria-current="page">Overview</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
+</div></header>
+
+<main><div class="wrap">
+  <h1>PeakFeed</h1>
+  <p class="lede">A personal tool for turning your own long videos into short vertical clips, and publishing the ones you approve to your own accounts.</p>
+  <p class="stamp">Last updated 11 November 2026</p>
+
+  <h2>What it is</h2>
+  <p>PeakFeed is a personal software project written and run by one individual developer. It is <strong>not a hosted service</strong>. There is no website to sign up for, no account to create here, and no server that holds anyone's data. The software runs on the developer's own computer and works only with that person's own accounts.</p>
+
+  <div class="card">
+    <p>This page exists because platform developer portals require an application to publish a homepage, terms of service and privacy policy before granting API access. Those documents are below, and they describe what the software genuinely does.</p>
+  </div>
+
+  <h2>What it does</h2>
+  <ul>
+    <li>Reads a long video the operator already has, or one they are authorised to use.</li>
+    <li>Transcribes it locally and suggests shorter segments that might work as clips.</li>
+    <li>Reframes those segments to vertical 9:16, adds subtitles, and renders them.</li>
+    <li>Shows each clip for review. <strong>Nothing is published without a human approving it first.</strong></li>
+    <li>Uploads approved clips to the operator's own connected accounts.</li>
+  </ul>
+
+  <h2>Platform connections</h2>
+  <p>The operator may connect their own accounts on third-party platforms using each platform's official OAuth flow. PeakFeed never asks for, sees, or stores a platform password — authentication happens on the platform's own sign-in page, and the platform returns a token.</p>
+  <p>On TikTok, uploaded clips are sent to the account holder's own inbox as <strong>drafts</strong>. The account holder then opens TikTok and decides whether to post them. PeakFeed does not post publicly on anyone's behalf.</p>
+
+  <h2>Not affiliated</h2>
+  <p>PeakFeed is an independent project. It is not affiliated with, endorsed by, or sponsored by TikTok, ByteDance, YouTube, Google, Instagram or Meta. All trademarks belong to their respective owners.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this software, these terms, or the privacy policy can be raised at <a href="https://github.com/isaacbuccini/peakfeed/issues">github.com/isaacbuccini/peakfeed/issues</a>.</p>
+</div></main>
+
+<footer><div class="wrap">
+  <span>PeakFeed — a personal project</span>
+  <span><a href="privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="terms.html">Terms</a></span>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy — PeakFeed</title>
+<meta name="description" content="What PeakFeed stores, where it stores it, and what it never does.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap">
+  <a class="brand" href="./"><span class="dot"></span> PeakFeed</a>
+  <nav>
+    <a href="./">Overview</a>
+    <a href="privacy.html" aria-current="page">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
+</div></header>
+
+<main><div class="wrap">
+  <h1>Privacy Policy</h1>
+  <p class="stamp">Last updated 11 November 2026</p>
+
+  <div class="card">
+    <p>PeakFeed is software that runs on one person's own computer. It is not a hosted service and it has no users other than the person running it. There is no server collecting data about anybody.</p>
+  </div>
+
+  <h2>1. Who is responsible</h2>
+  <p>PeakFeed is a personal project maintained by an individual developer, who is also the only operator of the software. There is no company, no staff and no third-party processor.</p>
+
+  <h2>2. This website</h2>
+  <p>These pages are static HTML hosted on GitHub Pages. They set no cookies, run no analytics, and contain no tracking scripts. One web font is loaded from Google Fonts; that request reaches Google and is subject to Google's own privacy policy. Nothing else leaves your browser. GitHub may log requests to its servers as part of operating the hosting, which is outside the developer's control.</p>
+
+  <h2>3. What the software stores when you connect an account</h2>
+  <p>When the operator connects a platform account through that platform's official OAuth flow, the platform returns credentials. PeakFeed stores the following in a database file on the operator's own computer:</p>
+  <ul>
+    <li><strong>Access and refresh tokens</strong> — encrypted at rest using Fernet (AES-128-CBC with an HMAC-SHA256 authentication tag). The encryption key is generated on first run and kept in a separate local file. Tokens are never returned by the application's own interface and never written to logs.</li>
+    <li><strong>The account identifier and display name</strong> issued by the platform, stored in clear so the interface can show which account is connected.</li>
+    <li><strong>The granted scopes and the token's expiry time</strong>, so the software knows what it may do and when to renew.</li>
+  </ul>
+  <p>On TikTok, the information retrieved is that covered by the <code>user.info.basic</code> scope — an account identifier and basic profile details such as display name. PeakFeed does not request, read or store a TikTok user's videos, followers, messages, or statistics through this connection.</p>
+
+  <h2>4. What the software does with it</h2>
+  <p>The tokens are used for one purpose: to upload video files the operator has explicitly approved to that same account, and to renew the token so the connection keeps working. On TikTok the upload goes to the account holder's own inbox as a draft, which the account holder then reviews in the TikTok app.</p>
+
+  <h2>5. What it never does</h2>
+  <ul>
+    <li>No data is sold, rented or shared with any third party.</li>
+    <li>No advertising, profiling, or behavioural tracking of any kind.</li>
+    <li>No passwords are requested or handled — authentication happens on the platform's own sign-in page.</li>
+    <li>No content belonging to other people is collected, downloaded or republished by the software on its own initiative.</li>
+    <li>Nothing is published to any platform without a person approving it first.</li>
+  </ul>
+
+  <h2>6. Where the data lives</h2>
+  <p>Everything described above is stored locally on the operator's own machine. There is no cloud database, no backup service and no remote log. Data is transmitted only to the platform it belongs to — for example, an upload to TikTok goes to TikTok — over HTTPS.</p>
+
+  <h2>7. Retention and deletion</h2>
+  <p>Tokens are kept until the operator disconnects the account or the platform expires them. Disconnecting an account removes its stored tokens. Deleting the local database file removes everything the software holds. Because nothing is stored remotely, there is no copy elsewhere to request the deletion of.</p>
+  <p>An account holder can also revoke PeakFeed's access at any time from the platform's own settings, independently of this software. Revocation takes effect immediately on the platform's side.</p>
+
+  <h2>8. Children</h2>
+  <p>The software is not directed at children and is not intended for use by anyone below the minimum age required by the platforms it connects to.</p>
+
+  <h2>9. Changes</h2>
+  <p>If this policy changes, the revised version will be published on this page with a new date above. There is no mailing list to notify, because no contact details are collected.</p>
+
+  <h2>10. Contact</h2>
+  <p>Questions or requests can be raised at <a href="https://github.com/isaacbuccini/peakfeed/issues">github.com/isaacbuccini/peakfeed/issues</a>.</p>
+</div></main>
+
+<footer><div class="wrap">
+  <span>PeakFeed — a personal project</span>
+  <span><a href="./">Overview</a> &nbsp;·&nbsp; <a href="terms.html">Terms</a></span>
+</div></footer>
+</body>
+</html>
